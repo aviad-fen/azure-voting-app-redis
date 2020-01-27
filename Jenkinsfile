@@ -53,7 +53,7 @@ node('master') {
               az account set --subscription "\$AZURE_SUBSCRIPTION_ID"
               az aks get-credentials --resource-group "${resourceGroup}" --name "${aks}" --admin --file kubeconfig
               az logout
-              kubectl --kubeconfig kubeconfig apply -f ../azure-vote-all-in-one-redis.yaml
+              kubectl --kubeconfig kubeconfig apply -f azure-vote-all-in-one-redis.yaml
               
             """
         }
